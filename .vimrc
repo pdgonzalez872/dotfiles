@@ -1,5 +1,4 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -10,6 +9,7 @@ Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/vim-auto-save'
 call vundle#end()
 
 syntax on               " syntax highlighting
@@ -32,3 +32,5 @@ set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
 let g:ctrlp_max_files=0
+let g:auto_save = 1 " autosave on startup
+let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
