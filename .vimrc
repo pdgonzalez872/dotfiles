@@ -10,6 +10,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/vim-auto-save'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 
 syntax on               " syntax highlighting
