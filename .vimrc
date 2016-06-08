@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plugin 'ctrlpvim/ctrlp'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-fugitive'
 call vundle#end()
