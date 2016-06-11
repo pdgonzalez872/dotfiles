@@ -11,6 +11,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'tpope/vim-commentary'
+Plugin 'ervandew/supertab'
+Plugin 'rking/ag.vim'
 call vundle#end()
 
 syntax on               " syntax highlighting
