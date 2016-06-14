@@ -22,6 +22,9 @@ set autoindent          " auto indenting
 set number              " line numbers
 colorscheme desert      " colorscheme desert
 set nobackup            " get rid of anoying ~file
+set backupdir=$TEMP//   " for some reason the above doesn't work. So, move the temp stuff to a temp file
+set directory=$TEMP//   " same as above
+
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set clipboard=unnamed
