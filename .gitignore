@@ -1,5 +1,8 @@
 # ignore everything except specified resources
 /*
 !.gitignore
-
 !.vimrc
+tags
+*.swp
+*.swo
+
