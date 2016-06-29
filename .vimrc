@@ -37,3 +37,6 @@ set expandtab       " Expand TABs to spaces
 let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
+
+" alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
+
