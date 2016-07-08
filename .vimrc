@@ -40,6 +40,8 @@ let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
 
 " alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
 
+set shortmess=a " per https://github.com/spf13/spf13-vim/issues/540
+
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
 set undodir=~/.vim/.undo//
