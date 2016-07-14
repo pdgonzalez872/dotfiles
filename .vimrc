@@ -13,6 +13,7 @@ Plugin 'vim-scripts/vim-auto-save'
 Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 Plugin 'rking/ag.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
 syntax on               " syntax highlighting
