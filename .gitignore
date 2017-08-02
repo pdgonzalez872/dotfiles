@@ -2,6 +2,7 @@
 /*
 !.gitignore
 !.vimrc
+!.bash_profile
 tags
 *.swp
 *.swo
