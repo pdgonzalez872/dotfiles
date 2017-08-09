@@ -76,6 +76,7 @@ export PATH=/Users/paulogonzalez1/Library/Android/sdk/platform-tools:$PATH
 # Useful aliases
 alias e=subl
 alias be="bundle exec"
+alias ber="bundle exec rspec"
 alias bedoitall="be rake db:drop db:create db:migrate db:seed"
 alias copy="pwd | pbcopy"
 alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
