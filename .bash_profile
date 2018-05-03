@@ -80,5 +80,7 @@ alias ber="bundle exec rspec"
 alias bedoitall="be rake db:drop db:create db:migrate db:seed"
 alias copy="pwd | pbcopy"
 alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
+alias todo="cd Desktop/dev/paulo_notes && be ruby todo/to_do_script.rb"
+alias todo_print="cd Desktop/dev/paulo_notes && be ruby todo/print_todo.rb"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
