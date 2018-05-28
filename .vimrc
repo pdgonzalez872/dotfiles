@@ -14,6 +14,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'slashmili/alchemist.vim'
 call vundle#end()
 
 syntax on               " syntax highlighting
