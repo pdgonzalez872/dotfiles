@@ -14,12 +14,14 @@ Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
-syntax on               " syntax highlighting
+syntax off               " syntax highlighting
+" syntax on               " syntax highlighting
 set backspace=2         " backspace in insert mode works like normal editor
 filetype indent on      " activates indenting for files
 set autoindent          " auto indenting
 set number              " line numbers
-colorscheme desert      " colorscheme desert
+" try without color scheme
+"colorscheme desert      " colorscheme desert
 set nobackup            " get rid of anoying ~file
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
