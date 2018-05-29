@@ -9,7 +9,6 @@ Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/vim-auto-save'
-Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -40,7 +39,7 @@ let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
 
 " alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
 
-"Swap file stuff 
+"Swap file stuff
 "set backupdir=~/.vim/.backup//
 "set directory=~/.vim/.swp//
 "set undodir=~/.vim/.undo//
