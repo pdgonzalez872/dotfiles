@@ -5,10 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " set the runtime path to include Vundle and initialize
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'slashmili/alchemist.vim'
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'tpope/vim-commentary'
