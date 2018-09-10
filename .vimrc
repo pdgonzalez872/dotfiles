@@ -35,6 +35,8 @@ set shiftwidth=2    " Indents will have a width of 2
 set softtabstop=2   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
+let NERDTreeShowHidden=1
+
 let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
