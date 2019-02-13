@@ -4,14 +4,6 @@ echo "Loading ~/.bash_profile a shell script that runs in every new terminal you
 # $VARIABLE will render before the rest of the command is executed
 echo "Logged in as $USER at $(hostname)"
 
-# Load RVM into a shell session *as a function*
-# Path for RVM
-
-# Rbenv autocomplete and shims
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# Path for RBENV
-test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-
 # Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
 
 # Path order matters, putting /usr/local/bin: before $PATH
@@ -68,19 +60,9 @@ alias ls='ls -Gh'
 # Force grep to always use the color option and show line numbers
 export GREP_OPTIONS='--color=always'
 
-# SDK path -> http://stackoverflow.com/questions/5526470/trying-to-add-adb-to-path-variable-osx
-# /Users/paulogonzalez1/Library/Android/sdk
-export ANDROID_HOME="/Users/paulogonzalez1/Library/Android/sdk"
-export PATH=/Users/paulogonzalez1/Library/Android/sdk/platform-tools:$PATH
-
 # Useful aliases
 alias e=subl
-alias be="bundle exec"
-alias ber="bundle exec rspec"
-alias bedoitall="be rake db:drop db:create db:migrate db:seed"
 alias copy="pwd | pbcopy"
-alias generate_gem_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
-alias todo="cd Desktop/dev/paulo_notes && be ruby todo/to_do_script.rb"
-alias todo_print="cd Desktop/dev/paulo_notes && be ruby todo/print_todo.rb"
 
+# Path for RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
