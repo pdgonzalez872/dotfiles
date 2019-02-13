@@ -15,10 +15,12 @@ Set up dev env:
 - dotfiles set up
 - use gitignore global
 - vim, Vundle install
+- tmux
 - install vscode for pairing
 - install `asdf`, get erlang and elixir
-- install pg
-- install node
+- create dummy phoenix app and make it run
+  - install pg
+  - install node
 
 
 Set up accounts:
