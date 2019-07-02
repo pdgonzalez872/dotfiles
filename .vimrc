@@ -24,7 +24,7 @@ set autoindent          " auto indenting
 set number              " line numbers
 " try without color scheme
 " colorscheme desert      " colorscheme desert
-colorscheme github      " colorscheme github
+colorscheme github
 set nobackup            " get rid of anoying ~file
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
