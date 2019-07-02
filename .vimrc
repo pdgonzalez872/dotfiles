@@ -12,16 +12,19 @@ Plugin 'vim-scripts/vim-auto-save'
 Plugin 'ervandew/supertab'
 Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'cormacrelf/vim-colors-github'
 call vundle#end()
 
-syntax off               " syntax highlighting
-" syntax on               " syntax highlighting
+" syntax off               " syntax highlighting
+syntax on               " syntax highlighting
 set backspace=2         " backspace in insert mode works like normal editor
 filetype indent on      " activates indenting for files
 set autoindent          " auto indenting
 set number              " line numbers
 " try without color scheme
-"colorscheme desert      " colorscheme desert
+" colorscheme desert      " colorscheme desert
+colorscheme github      " colorscheme github
 set nobackup            " get rid of anoying ~file
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
