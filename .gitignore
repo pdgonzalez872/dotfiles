@@ -1,7 +1,6 @@
 # ignore everything except specified resources
 !.gitignore
 
-tags
 *.swp
 *.swo
 
