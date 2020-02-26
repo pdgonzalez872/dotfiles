@@ -46,4 +46,4 @@ let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
 
-abbr pry require IEX; IEx.pry<Esc>
+abbr require require IEx; IEx.pry<Esc>
