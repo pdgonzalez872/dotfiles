@@ -41,7 +41,7 @@ git_prompt ()
     return 0
   fi
   # Grab working branch name
-  git_branch=$(Git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+  git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
   # Clean or dirty branch
   if git diff --quiet 2>/dev/null >&2; then
     git_color="${c_git_clean}"
@@ -56,9 +56,6 @@ git_prompt ()
 export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
-
-# Force grep to always use the color option and show line numbers
-export GREP_OPTIONS='--color=always'
 
 # Useful aliases
 alias e=subl
