@@ -14,6 +14,7 @@ Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'cormacrelf/vim-colors-github'
+Plugin 'dense-analysis/ale'
 call vundle#end()
 
 " syntax off               " syntax highlighting
