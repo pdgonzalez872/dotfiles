@@ -1,21 +1,19 @@
 set nocompatible              " be iMproved, required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" set the runtime path to include Vundle and initialize
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/vim-auto-save'
-Plugin 'ervandew/supertab'
-Plugin 'rking/ag.vim'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'cormacrelf/vim-colors-github'
-Plugin 'dense-analysis/ale'
-call vundle#end()
+" Make the switch to Plug
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'ervandew/supertab'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'slashmili/alchemist.vim'
+Plug 'cormacrelf/vim-colors-github'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
 " syntax off               " syntax highlighting
 syntax on               " syntax highlighting
@@ -29,6 +27,7 @@ colorscheme github
 set nobackup            " get rid of anoying ~file
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 set clipboard=unnamed
 
 set tabstop=2       " The width of a TAB is set to 2.

@@ -1,7 +1,13 @@
 # ignore everything except specified resources
 !.gitignore
 
+# vim stuff
 *.swp
 *.swo
 
+# tours
+.tours/
+
+# helpful to have a file like this at the root of a project.
+# Can draft commits, jot down ideas, ets.
 *.commit_message_paulo.txt
