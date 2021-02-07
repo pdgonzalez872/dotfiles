@@ -96,6 +96,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export KERL_BUILD_DOCS="yes"
+
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
