@@ -96,8 +96,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# iex history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# asdf -> https://asdf-vm.com/#/core-manage-asdf
 export KERL_BUILD_DOCS="yes"
-
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 . $HOME/.asdf/asdf.sh
-
 . $HOME/.asdf/completions/asdf.bash
