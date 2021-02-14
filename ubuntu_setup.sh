@@ -107,6 +107,7 @@ simple_install "curl"
 simple_install "git"
 simple_install "vim"
 simple_install "tmux"
+simple_install "gnome-tweaks"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
 setup_vim
 setup_tmux
