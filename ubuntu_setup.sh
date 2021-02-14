@@ -111,12 +111,12 @@ git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
 setup_vim
 setup_tmux
 setup_asdf
+simple_install "rbenv"
 setup_bashrc
 install_erlang
 install_elixir
 simple_install "npm"
 simple_install "nodejs"
-simple_install "rbenv"
 install_docker
 install_docker_compose
 pull_postgres_docker
