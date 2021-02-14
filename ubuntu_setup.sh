@@ -93,7 +93,7 @@ function install_docker_compose() {
 function pull_postgres_docker() {
   MSG="pull postgres docker"
   echo "Start $MSG"
-  docker pull postgres
+  sudo docker pull postgres
   echo "Finish $MSG"
 }
 
