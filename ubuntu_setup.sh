@@ -97,7 +97,6 @@ function pull_postgres_docker() {
   echo "Finish $MSG"
 }
 
-
 #
 # Do Work
 #
@@ -117,10 +116,9 @@ install_erlang
 install_elixir
 simple_install "npm"
 simple_install "nodejs"
+simple_install "rbenv"
 install_docker
 install_docker_compose
 pull_postgres_docker
 
 echo "** Run :PluginInstall inside vim to get all the vim deps"
-
-echo "Everything should be good to go now"
