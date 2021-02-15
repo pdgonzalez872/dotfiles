@@ -108,7 +108,9 @@ simple_install "git"
 simple_install "vim"
 simple_install "tmux"
 simple_install "gnome-tweaks"
+simple_install "silversearcher-ag"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
+ln -sf ~/dotfiles/.gitignore ~/.gitignore
 setup_vim
 setup_tmux
 setup_asdf
@@ -123,3 +125,4 @@ install_docker_compose
 pull_postgres_docker
 
 echo "** Run :PluginInstall inside vim to get all the vim deps"
+echo "** Configure global gitignore"
