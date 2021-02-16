@@ -22,6 +22,11 @@ function setup_vim() {
   echo "Finish $MSG"
 }
 
+function setup_git() {
+  ln -sf ~/dotfiles/.gitignore ~/.gitignore
+  git config --global core.editor vim
+}
+
 function setup_tmux() {
   MSG="setting up tmux"
   echo "Start $MSG"
@@ -110,7 +115,7 @@ simple_install "tmux"
 simple_install "gnome-tweaks"
 simple_install "silversearcher-ag"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
-ln -sf ~/dotfiles/.gitignore ~/.gitignore
+setup_git
 setup_vim
 setup_tmux
 setup_asdf
