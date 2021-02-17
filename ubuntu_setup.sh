@@ -19,6 +19,7 @@ function setup_vim() {
   echo "Start $MSG"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ln -sf ~/dotfiles/.vimrc ~/.vimrc
+  vim +PlugInstall +qall
   echo "Finish $MSG"
 }
 
@@ -129,5 +130,4 @@ install_docker
 install_docker_compose
 pull_postgres_docker
 
-echo "** Run :PluginInstall inside vim to get all the vim deps"
 echo "** Configure global gitignore"
