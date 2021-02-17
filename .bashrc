@@ -1,4 +1,4 @@
-
+echo "Loading ~/.bashrc a shell script that runs in every new terminal you open"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
