@@ -50,7 +50,7 @@ function setup_bashrc() {
   MSG="setting up bashrc"
   echo "Start $MSG"
   ln -sf ~/dotfiles/.bashrc ~/.bashrc
-  source ~./bashrc
+  source ~/.bashrc
   echo "Finish $MSG"
 }
 
