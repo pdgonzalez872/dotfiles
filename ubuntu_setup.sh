@@ -109,6 +109,7 @@ function pull_postgres_docker() {
 
 echo "Welcome to Paulo's machine setup script"
 
+sudo apt update
 simple_install "curl"
 simple_install "git"
 simple_install "vim"
