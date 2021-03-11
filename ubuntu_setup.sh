@@ -79,6 +79,17 @@ function install_elixir() {
   echo "Finish $MSG"
 }
 
+function install_postgres() {
+  MSG="installing postgres"
+  echo "Start $MSG"
+  # From https://www.postgresql.org/download/linux/ubuntu/
+  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  sudo apt-get update
+  sudo apt-get -y install postgresql
+  echo "Finish $MSG"
+}
+
 function install_docker() {
   MSG="installing docker"
   echo "Start $MSG"
@@ -121,14 +132,17 @@ setup_git
 setup_vim
 setup_tmux
 setup_asdf
-simple_install "rbenv"
 setup_bashrc
 install_erlang
 install_elixir
+install_postgres
 simple_install "npm"
 simple_install "nodejs"
-install_docker
-install_docker_compose
-pull_postgres_docker
+
+## Uncomment these if you'd like.
+# simple_install "rbenv"
+# install_docker
+# install_docker_compose
+# pull_postgres_docker
 
 echo "** Configure global gitignore"
