@@ -127,6 +127,7 @@ simple_install "vim"
 simple_install "tmux"
 simple_install "gnome-tweaks"
 simple_install "silversearcher-ag"
+simple_install "nginx"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
 setup_git
 setup_vim
