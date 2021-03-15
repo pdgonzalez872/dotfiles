@@ -25,5 +25,11 @@ tmux rename-window -t monitor:4 'server'
 tmux rename-window -t monitor:5 'docker'
 tmux rename-window -t monitor:6 'bash'
 tmux rename-window -t monitor:7 'logs'
-tmux rename-window -t monitor:8 'bash'
+tmux rename-window -t monitor:8 'htop'
 tmux rename-window -t monitor:9 'psql'
+
+tmux send-keys -t monitor:1 'vim' Enter
+tmux split -t monitor:7
+tmux split -t monitor:7
+tmux split -t monitor:7
+tmux send-keys -t monitor:8 'htop' Enter
