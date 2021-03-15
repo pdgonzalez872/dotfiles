@@ -6,5 +6,10 @@ alias whoami=/bin/whoami
 # user will be able to use pwd
 alias pwd=/bin/pwd
 
+# necessary to run Phoenix releases:
+alias readlink=/bin/readlink
+alias cut=/bin/cut
+alias sed=/bin/sed
+
 PATH=$HOME/bin
 export PATH
