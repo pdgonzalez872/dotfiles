@@ -1,0 +1,10 @@
+# user will be able to use cd
+
+# user will be able to use whoami
+alias whoami=/bin/whoami
+
+# user will be able to use pwd
+alias pwd=/bin/pwd
+
+PATH=$HOME/bin
+export PATH
