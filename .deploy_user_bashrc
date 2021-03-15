@@ -1,4 +1,6 @@
 # Now, we need to ln the things we want for the user to use.
 
+alias cd="printf 'not today \n'"
+
 PATH=$HOME/bin
 export PATH
