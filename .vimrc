@@ -10,9 +10,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'ervandew/supertab'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'slashmili/alchemist.vim'
 Plug 'cormacrelf/vim-colors-github'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 call plug#end()
 
 " syntax off               " syntax highlighting
@@ -48,3 +49,14 @@ let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
 
 abbr require require IEx; IEx.pry<Esc>
+
+" folding settings
+" Then you can toggle folding with za. You can fold everything with zM and
+" unfold everything with zR. zm and zr can be used to get those folds just
+" right. Always remember the almighty help file at “help :folding” if you get
+" stuck.
+" https://stackoverflow.com/a/10644424/3163631
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
