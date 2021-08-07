@@ -94,6 +94,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$[parse_git_branch]\[\e[00m\]$ "
+
 # iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -106,3 +112,4 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 # # rbenv for Ruby, when needed
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
+. "$HOME/.cargo/env"
