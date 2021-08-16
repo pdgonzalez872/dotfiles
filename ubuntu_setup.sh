@@ -142,7 +142,6 @@ simple_install "npm"
 simple_install "nodejs"
 
 ## Uncomment these if you'd like.
-# simple_install "rbenv"
 # install_docker
 # install_docker_compose
 # pull_postgres_docker
