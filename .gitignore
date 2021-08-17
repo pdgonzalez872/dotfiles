@@ -11,3 +11,6 @@
 # helpful to have a file like this at the root of a project.
 # Can draft commits, jot down ideas, ets.
 *.commit_message_paulo.txt
+
+# logs
+.paulo_logs.log
