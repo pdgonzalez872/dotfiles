@@ -58,11 +58,9 @@ export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 alias ls='ls -Gh'
 
 # Useful aliases
-alias e=subl
 alias copy="pwd | pbcopy"
+alias twiki="mix ecto.migrate && mix ecto.rollback"
 
-# Path for RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+# asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
