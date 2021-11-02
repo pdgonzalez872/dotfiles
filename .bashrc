@@ -112,4 +112,5 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 # # rbenv for Ruby, when needed
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
-. "$HOME/.cargo/env"
+# # cargo
+# . "$HOME/.cargo/env"
