@@ -64,3 +64,6 @@ alias twiki="mix ecto.migrate && mix ecto.rollback"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# racket
+alias racket='/Applications/Racket\ v8.2/bin/racket'
