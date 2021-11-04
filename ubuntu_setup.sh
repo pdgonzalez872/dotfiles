@@ -14,12 +14,40 @@ function simple_install() {
   echo "Finish installing $1"
 }
 
+function setup_yarn() {
+  MSG="setting up yarn"
+  echo "Start $MSG"
+  asdf plugin-add yarn
+  asdf install yarn latest
+  echo "Finish $MSG"
+}
+
+function setup_nvim_coc() {
+  MSG="setting up nvim coc"
+  echo "Start $MSG"
+  cd ~/.vim/plugged/coc.nvim/
+  yarn install
+  cd ~
+  echo "Finish $MSG"
+}
+
+function setup_elixir_ls() {
+  MSG="setting up elixir-ls"
+  echo "Start $MSG"
+  mkdir -p ~/.vim/plugged/coc-elixir/els-release/
+  curl -L https://github.com/elixir-lsp/elixir-ls/releases/download/v0.8.1/elixir-ls.zip > ~/.vim/plugged/coc-elixir/els-release/elixir-ls.zip
+  unzip ~/.vim/plugged/coc-elixir/els-release/elixir-ls.zip -d ~/.vim/plugged/coc-elixir/els-release/
+  echo "Finish $MSG"
+}
+
 function setup_vim() {
   MSG="setting up vim"
   echo "Start $MSG"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ln -sf ~/dotfiles/.vimrc ~/.vimrc
+  ln -s ~/.vimrc ~/.config/nvim/init.vim
   vim +PlugInstall +qall
+  nvim +PlugInstall +qall
   echo "Finish $MSG"
 }
 
@@ -131,10 +159,13 @@ simple_install "nginx"
 simple_install "fail2ban"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
 setup_git
-setup_vim
 setup_tmux
 setup_asdf
+setup_yarn
 setup_bashrc
+setup_elixir_ls
+setup_vim
+setup_nvim_coc
 install_erlang
 install_elixir
 install_postgres

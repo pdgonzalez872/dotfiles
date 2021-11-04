@@ -13,8 +13,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+" Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 call plug#end()
 
 " syntax off               " syntax highlighting
@@ -61,3 +62,6 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+" no highlights
+nnoremap <silent> fn :noh<CR>
