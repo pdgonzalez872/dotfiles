@@ -14,6 +14,7 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 call plug#end()
 
 " syntax off               " syntax highlighting
