@@ -36,7 +36,7 @@ function setup_elixir_ls() {
   echo "Start $MSG"
   mkdir -p ~/.vim/plugged/coc-elixir/els-release/
   curl -L https://github.com/elixir-lsp/elixir-ls/releases/download/v0.8.1/elixir-ls.zip > ~/.vim/plugged/coc-elixir/els-release/elixir-ls.zip
-  unzip ~/.vim/plugged/coc-elixir/els-release/elixir-ls.zip -d ~/.vim/plugged/coc-elixir/els-release/
+  unzip -o ~/.vim/plugged/coc-elixir/els-release/elixir-ls.zip -d ~/.vim/plugged/coc-elixir/els-release/
   echo "Finish $MSG"
 }
 
@@ -45,8 +45,18 @@ function setup_vim() {
   echo "Start $MSG"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ln -sf ~/dotfiles/.vimrc ~/.vimrc
-  ln -s ~/.vimrc ~/.config/nvim/init.vim
   vim +PlugInstall +qall
+  echo "Finish $MSG"
+}
+
+function setup_nvim() {
+  MSG="setting up nvim"
+  echo "Start $MSG"
+  mkdir -p ~/.config/nvim
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  rm ~/.config/nvim/init.vim
+  ln -s ~/.vimrc ~/.config/nvim/init.vim
   nvim +PlugInstall +qall
   echo "Finish $MSG"
 }
@@ -54,6 +64,10 @@ function setup_vim() {
 function setup_git() {
   ln -sf ~/dotfiles/.gitignore ~/.gitignore
   git config --global core.editor vim
+}
+
+function setup_gitignore() {
+  git config --global core.excludesfile ~/.gitignore
 }
 
 function setup_tmux() {
@@ -152,6 +166,7 @@ sudo apt update
 simple_install "curl"
 simple_install "git"
 simple_install "vim"
+simple_install "neovim"
 simple_install "tmux"
 simple_install "gnome-tweaks"
 simple_install "silversearcher-ag"
@@ -159,12 +174,14 @@ simple_install "nginx"
 simple_install "fail2ban"
 git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
 setup_git
+setup_gitignore
 setup_tmux
 setup_asdf
 setup_yarn
 setup_bashrc
 setup_elixir_ls
 setup_vim
+setup_nvim
 setup_nvim_coc
 install_erlang
 install_elixir
@@ -176,5 +193,3 @@ simple_install "nodejs"
 # install_docker
 # install_docker_compose
 # pull_postgres_docker
-
-echo "** Configure global gitignore"
