@@ -104,7 +104,7 @@ function install_erlang() {
     libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev \
       libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev \
         openjdk-11-jdk
-  TARGET_VERSION="ref:master"
+  TARGET_VERSION="24.2"
   export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
   asdf install erlang $TARGET_VERSION
   asdf global erlang $TARGET_VERSION
@@ -115,7 +115,7 @@ function install_elixir() {
   MSG="installing elixir"
   echo "Start $MSG"
   asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-  TARGET_VERSION="master"
+  TARGET_VERSION="1.13.1-otp-24"
   asdf install elixir $TARGET_VERSION
   asdf global elixir $TARGET_VERSION
   echo "Finish $MSG"
