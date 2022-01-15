@@ -44,7 +44,7 @@ function setup_vim() {
   MSG="setting up vim"
   echo "Start $MSG"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  ln -sf ~/dotfiles/.vimrc ~/.vimrc
+  sudo ln -sf ~/dotfiles/.vimrc ~/.vimrc
   vim +PlugInstall +qall
   echo "Finish $MSG"
 }
@@ -56,13 +56,13 @@ function setup_nvim() {
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   rm ~/.config/nvim/init.vim
-  ln -s ~/.vimrc ~/.config/nvim/init.vim
+  sudo ln -s ~/.vimrc ~/.config/nvim/init.vim
   nvim +PlugInstall +qall
   echo "Finish $MSG"
 }
 
 function setup_git() {
-  ln -sf ~/dotfiles/.gitignore ~/.gitignore
+  sudo ln -sf ~/dotfiles/.gitignore ~/.gitignore
   git config --global core.editor vim
 }
 
@@ -73,7 +73,7 @@ function setup_gitignore() {
 function setup_tmux() {
   MSG="setting up tmux"
   echo "Start $MSG"
-  ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+  sudo ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   tmux source ~/.tmux.conf
   echo "Finish $MSG"
@@ -91,7 +91,7 @@ function setup_asdf() {
 function setup_bashrc() {
   MSG="setting up bashrc"
   echo "Start $MSG"
-  ln -sf ~/dotfiles/.bashrc ~/.bashrc
+  sudo ln -sf ~/dotfiles/.bashrc ~/.bashrc
   source ~/.bashrc
   echo "Finish $MSG"
 }
