@@ -56,7 +56,7 @@ function setup_nvim() {
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   rm ~/.config/nvim/init.vim
-  sudo ln -s ~/.vimrc ~/.config/nvim/init.vim
+  sudo ln -sf ~/.vimrc ~/.config/nvim/init.vim
   nvim +PlugInstall +qall
   echo "Finish $MSG"
 }
