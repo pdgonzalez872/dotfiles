@@ -26,7 +26,7 @@ set autoindent          " auto indenting
 set number              " line numbers
 " try without color scheme
 " colorscheme desert      " colorscheme desert
-colorscheme delek      " colorscheme desert
+" colorscheme delek      " colorscheme delek
 " colorscheme github
 set nobackup            " get rid of anoying ~file
 
