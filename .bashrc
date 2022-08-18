@@ -109,8 +109,5 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-# # rbenv for Ruby, when needed
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
 # # cargo
 # . "$HOME/.cargo/env"

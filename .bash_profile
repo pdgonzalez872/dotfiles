@@ -69,3 +69,6 @@ alias copy="pbcopy"
 alias racket='/Applications/Racket\ v8.2/bin/racket'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+# IEx shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
