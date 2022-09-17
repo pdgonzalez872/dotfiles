@@ -111,3 +111,5 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 
 # # cargo
 # . "$HOME/.cargo/env"
+
+alias copy="xclip -sel c"
