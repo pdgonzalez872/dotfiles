@@ -13,8 +13,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 call plug#end()
 

@@ -14,6 +14,13 @@ function simple_install() {
   echo "Finish installing $1"
 }
 
+function setup_dotfiles() {
+  MSG="setting up dotfiles"
+  echo "Start $MSG"
+  git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
+  echo "Finish $MSG"
+}
+
 function setup_yarn() {
   MSG="setting up yarn"
   echo "Start $MSG"
@@ -45,7 +52,7 @@ function setup_vim() {
   echo "Start $MSG"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   sudo ln -sf ~/dotfiles/.vimrc ~/.vimrc
-  vim +PlugInstall +qall
+  # vim +PlugInstall +qall
   echo "Finish $MSG"
 }
 
@@ -165,24 +172,24 @@ echo "Welcome to Paulo's machine setup script"
 sudo apt update
 simple_install "curl"
 simple_install "git"
+setup_git
+setup_gitignore
+setup_dotfiles
 simple_install "vim"
-simple_install "neovim"
+setup_vim
+# simple_install "neovim"
+# setup_nvim
+# setup_nvim_coc
 simple_install "tmux"
+setup_tmux
 simple_install "gnome-tweaks"
 simple_install "silversearcher-ag"
 simple_install "nginx"
 simple_install "fail2ban"
-git clone https://github.com/pdgonzalez872/dotfiles.git ~/dotfiles
-setup_git
-setup_gitignore
-setup_tmux
 setup_asdf
 setup_yarn
 setup_bashrc
 setup_elixir_ls
-setup_vim
-setup_nvim
-setup_nvim_coc
 install_erlang
 install_elixir
 install_postgres
@@ -190,6 +197,6 @@ simple_install "npm"
 simple_install "nodejs"
 
 ## Uncomment these if you'd like.
-# install_docker
-# install_docker_compose
+install_docker
+install_docker_compose
 # pull_postgres_docker
