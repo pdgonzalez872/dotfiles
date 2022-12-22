@@ -113,3 +113,4 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 # . "$HOME/.cargo/env"
 
 alias copy="xclip -sel c"
+alias tools="/home/paulo/dotfiles/scripts/tool-versions.sh"
