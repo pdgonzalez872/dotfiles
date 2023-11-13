@@ -60,6 +60,7 @@ alias ls='ls -aGh'
 # Useful aliases
 alias twiki="mix ecto.migrate && mix ecto.rollback"
 alias copy="pbcopy"
+alias tools="~/dotfiles/scripts/tool-versions.sh"
 
 # asdf
 . $HOME/.asdf/asdf.sh
