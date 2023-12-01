@@ -65,3 +65,27 @@ set foldlevel=1         "this is just what i use
 
 " no highlights
 nnoremap <silent> fn :noh<CR>
+
+" auto formatting
+
+" impl 1 - https://www.baeldung.com/linux/vi-automatic-commands-reloading-file-contents
+" autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() !~ '(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+" autocmd FileChangedShellPost * echohl WarningMsg | echo "Buffer refreshed with external changes." | echohl None
+
+" impl 2 - ChatGPT after some discussion
+" Set autoread to reload files automatically when they're changed externally
+set autoread
+
+" Set up a timer to periodically check for changes in the file
+set updatetime=500 " Check every milliseconds
+
+" Function to reload the buffer if the file was changed externally
+function! RefreshBuffer()
+  if getbufvar(bufnr(''), '&mod') == '0'
+    checktime
+  endif
+endfunction
+
+" Use the CursorHold event to call the RefreshBuffer function
+autocmd CursorHold * call RefreshBuffer()
+" end impl 2
