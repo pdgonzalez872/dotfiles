@@ -17,4 +17,6 @@
 \pset unicode_header_linestyle double
 set intervalstyle to 'postgres_verbose';
 
+\set list_tables 'SELECT tablename FROM pg_tables WHERE schemaname = current_schema();'
+
 \set QUIET 0
