@@ -12,6 +12,7 @@ Plug 'ervandew/supertab'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'elixir-editors/vim-elixir'
+Plug 'alvan/vim-closetag'
 Plug 'slashmili/alchemist.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
@@ -53,6 +54,7 @@ let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
 
+" Repetition
 abbr require require Logger<Esc>
 
 " folding settings
