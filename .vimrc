@@ -46,6 +46,9 @@ let NERDTreeShowHidden=1
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeShowLineNumbers=1 " Show line numbers inside the NERDTree frame
 
+" Add file types for HEEx and LEEx
+au BufRead,BufNewFile *.heex,*.leex set filetype=html
+
 let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
 let g:auto_save_in_insert_mode = 0 " does not save while in insert mode
