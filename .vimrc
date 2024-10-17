@@ -49,7 +49,7 @@ let NERDTreeShowLineNumbers=1 " Show line numbers inside the NERDTree frame
 
 " Add file types for HEEx and LEEx
 au BufRead,BufNewFile *.heex,*.leex set filetype=eelixir
-let g:closetag_filetypes = 'html,xhtml,phtml,eelixir'
+let g:closetag_filetypes = 'html,xhtml,phtml,eelixir,elixir'
 
 let g:ctrlp_max_files=0
 let g:auto_save = 1 " autosave on startup
