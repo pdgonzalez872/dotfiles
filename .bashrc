@@ -114,3 +114,4 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 
 alias copy="xclip -sel c"
 alias tools="/home/paulo/dotfiles/scripts/tool-versions.sh"
+alias fly="$HOME/.fly/bin/flyctl"
