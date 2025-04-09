@@ -55,7 +55,7 @@ git_prompt ()
 # search for LSCOLORS
 export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
-alias ls='ls -aGh'
+alias ls='ls -aGhl'
 
 # Useful aliases
 alias twiki="mix ecto.migrate && mix ecto.rollback"
