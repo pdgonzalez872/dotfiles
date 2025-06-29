@@ -95,3 +95,8 @@ endfunction
 " Use the CursorHold event to call the RefreshBuffer function
 autocmd CursorHold * call RefreshBuffer()
 " end impl 2
+"
+augroup TrimWhitespace
+  autocmd!
+  autocmd BufWritePre * %s/\s\+$//e
+augroup END
