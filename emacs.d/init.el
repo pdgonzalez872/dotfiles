@@ -54,7 +54,7 @@
       (goto-char (point-min))
       (while (not (eobp))
         (let ((path (neo-buffer--get-filename-current-line)))
-          (when (and path (neo-buffer--get-node-directory-p path))
+          (when (and path (file-directory-p path))
             (neotree-expand-node)))
         (forward-line 1))))
 
@@ -66,7 +66,7 @@
       (goto-char (point-min))
       (while (not (eobp))
         (let ((path (neo-buffer--get-filename-current-line)))
-          (when (and path (neo-buffer--get-node-directory-p path))
+          (when (and path (file-directory-p path))
             (neotree-collapse-node)))
         (forward-line 1))))
 
