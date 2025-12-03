@@ -109,3 +109,8 @@
 (make-directory "~/.emacs.d/auto-saves" t)
 (global-display-line-numbers-mode 1)
 (tab-bar-mode 1)
+(add-hook 'focus-out-hook #'save-some-buffers)
+(setq require-final-newline t)
+(setq neo-window-width 35)
+(setq neo-window-fixed-size nil)
+
