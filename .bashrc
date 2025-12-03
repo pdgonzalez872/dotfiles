@@ -111,6 +111,13 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # # cargo
 # . "$HOME/.cargo/env"
 
-alias copy="xclip -sel c"
+
+# Use Wayland clipboard if available, fall back to xclip
+if command -v wl-copy >/dev/null 2>&1; then
+  alias copy="wl-copy"
+else
+  alias copy="xclip -selection clipboard"
+fi
+
 alias tools="/home/paulo/dotfiles/scripts/tool-versions.sh"
 alias fly="$HOME/.fly/bin/flyctl"
