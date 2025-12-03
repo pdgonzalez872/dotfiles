@@ -8,7 +8,6 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(setq neo-show-hidden-files t)
 
 (eval-when-compile
   (require 'use-package))
@@ -26,6 +25,7 @@
 
 ;; show line numbers in code
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(global-display-line-numbers-mode 1)
 
 ;; remember cursor position in files
 (save-place-mode 1)
@@ -39,11 +39,46 @@
 ;; ------------------------------
 (use-package neotree
   :bind
-  (("C-c n" . neotree-toggle)))
+  (("C-c n" . neotree-toggle))
+  :config
+  ;; show dotfiles, set width, allow resizing
+  (setq neo-show-hidden-files t
+        neo-window-width 35
+        neo-window-fixed-size nil)
+
+  ;; Recursively expand all directories in Neotree
+  (defun my/neotree-expand-all ()
+    "Recursively expand all directories in the current Neotree buffer."
+    (interactive)
+    (save-excursion
+      (goto-char (point-min))
+      (while (not (eobp))
+        (let ((path (neo-buffer--get-filename-current-line)))
+          (when (and path (neo-buffer--get-node-directory-p path))
+            (neotree-expand-node)))
+        (forward-line 1))))
+
+  ;; Recursively collapse all directories in Neotree
+  (defun my/neotree-collapse-all ()
+    "Recursively collapse all directories in the current Neotree buffer."
+    (interactive)
+    (save-excursion
+      (goto-char (point-min))
+      (while (not (eobp))
+        (let ((path (neo-buffer--get-filename-current-line)))
+          (when (and path (neo-buffer--get-node-directory-p path))
+            (neotree-collapse-node)))
+        (forward-line 1))))
+
+  ;; Bind keys inside Neotree
+  (define-key neotree-mode-map (kbd "E") #'my/neotree-expand-all)
+  (define-key neotree-mode-map (kbd "C") #'my/neotree-collapse-all))
 
 ;; In neotree:
-;;  - Enter: open file
 ;;  - TAB: toggle node
+;;  - RET: open file
+;;  - E: expand all directories (custom)
+;;  - C: collapse all directories (custom)
 ;;  - q: quit
 
 ;; ------------------------------
@@ -107,10 +142,14 @@
 (setq auto-save-file-name-transforms `((".*" "~/.emacs.d/auto-saves/" t)))
 (make-directory "~/.emacs.d/backups" t)
 (make-directory "~/.emacs.d/auto-saves" t)
-(global-display-line-numbers-mode 1)
-(tab-bar-mode 1)
-(add-hook 'focus-out-hook #'save-some-buffers)
-(setq require-final-newline t)
-(setq neo-window-width 35)
-(setq neo-window-fixed-size nil)
 
+;; ------------------------------
+;; Tabs, saving behavior, final newline
+;; ------------------------------
+(tab-bar-mode 1)
+
+;; Save all modified buffers when Emacs loses focus
+(add-hook 'focus-out-hook #'save-some-buffers)
+
+;; Always ensure file ends with a newline on save
+(setq require-final-newline t)
