@@ -1,0 +1,20 @@
+# Emacs package caches
+elpa/
+eln-cache/
+transient/
+
+# Emacs session + MRU lists
+recentf
+places
+projectile-bookmarks.eld
+
+# Auto-save, backups (if they appear)
+auto-save-list/
+backups/
+auto-saves/
+
+# Eglot LSP data (future)
+.eglot/
+
+# TRAMP
+tramp
