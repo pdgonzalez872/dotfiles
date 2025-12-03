@@ -5,6 +5,47 @@
 *.swp
 *.swo
 
+### Emacs stuff ###
+# backup files (created when saving)
+*~
+
+# auto-save files (created every few seconds)
+\#*\#
+
+# lock files created when editing
+.#*
+
+# Emacs auto-save list files
+auto-save-list/
+
+# TRAMP remote file metadata
+tramp
+
+# Emacs desktop/session files
+.emacs.desktop
+.emacs.desktop.lock
+
+# Bookmark file (Emacs keeps this in home dir by default)
+.bookmarks
+
+# Org-mode ID location database
+*.org-id-locations
+
+# Projectile project cache
+.projectile
+
+# Eglot per-project LSP data
+.eglot/
+
+# Flymake temporary diagnostics data
+flymake_*
+
+# Company backend temp files
+.company-directory
+
+### End Emacs ###
+
+
 # tours
 .tours/
 

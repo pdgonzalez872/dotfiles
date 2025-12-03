@@ -86,14 +86,15 @@ function setup_tmux() {
   echo "Finish $MSG"
 }
 
-function setup_asdf() {
-  MSG="setting up asdf"
-  echo "Start $MSG"
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-  cd ~/.asdf
-  git checkout "$(git describe --abbrev=0 --tags)"
-  echo "Finish $MSG"
-}
+# this
+# function setup_asdf() {
+#   MSG="setting up asdf"
+#   echo "Start $MSG"
+#   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+#   cd ~/.asdf
+#   git checkout "$(git describe --abbrev=0 --tags)"
+#   echo "Finish $MSG"
+# }
 
 function setup_bashrc() {
   MSG="setting up bashrc"
@@ -121,7 +122,7 @@ function install_erlang() {
 function install_elixir() {
   MSG="installing elixir"
   echo "Start $MSG"
-  asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+  asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
   TARGET_VERSION="1.14.0-otp-25"
   asdf install elixir $TARGET_VERSION
   asdf global elixir $TARGET_VERSION
@@ -186,7 +187,8 @@ simple_install "gnome-tweaks"
 simple_install "silversearcher-ag"
 simple_install "nginx"
 simple_install "fail2ban"
-setup_asdf
+# Need to do https://github.com/asdf-vm/asdf/releases to install asdf now...
+# setup_asdf
 setup_yarn
 setup_bashrc
 setup_elixir_ls
